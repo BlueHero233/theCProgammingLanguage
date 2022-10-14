@@ -22,17 +22,12 @@ int main(void)
     int soma=0, numero, i;
     if (numero%i==0)
     {
-        soma=soma+i
+        soma=soma+i;
         printf("%d",i);
     }
-    
     if (soma>numero)
-    {
         printf("%d eh abundante porque a soma dos divisores eh maior que %d", numero, numero);
-    }
     else
-    {
         printf("%d nao eh abundante porque a soma dos divisores eh menor que %d", numero, numero);
-    }
     return 0;
 }

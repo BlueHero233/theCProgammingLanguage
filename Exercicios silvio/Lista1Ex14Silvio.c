@@ -1,6 +1,6 @@
-//Dado um número inteiro não nulo de três dígitos, imprimir este numero ao contrario,
-//isto e, se a entrada for 123 (cento e vinte e três), imprimir 321 (trezentos e vinte e
-//um). Usar operações sobre inteiros, por exemplo, divisões sucessivas por 10.
+//Dado um nï¿½mero inteiro nï¿½o nulo de trï¿½s dï¿½gitos, imprimir este numero ao contrario,
+//isto e, se a entrada for 123 (cento e vinte e trï¿½s), imprimir 321 (trezentos e vinte e
+//um). Usar operaï¿½ï¿½es sobre inteiros, por exemplo, divisï¿½es sucessivas por 10.
 #include<stdio.h>
 int main (void)
 {

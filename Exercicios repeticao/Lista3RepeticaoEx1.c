@@ -16,21 +16,16 @@ int main(void)
             printf("Informe a quantidade de numeros primos que serao mostrados:\n");
             scanf("%d", &quantidade);
             if (quantidade<0)
-            {
                 printf("Valor invalido\n");
-            }
-        while (quantidade<=0)
+        }while (quantidade<=0);
         contPrimos=0;
         i=2;
         do
         {
             for (j=1;j<=i;j++)
             {
-
                 if (i%j==0)
-                {
                     divisores++;
-                }
             }
             if (divisores==2)
             {

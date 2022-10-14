@@ -4,19 +4,20 @@ considerado.*/
 #include <stdio.h>
 int main(void)
 {
-    int primeiro
-    if (primeiro==0)
-    {
-        maior=num
-        menor=num
-        primeiro=primeiro++
-    }    
-    if(numero>maior)
-    {
-        maior=numero
-    }
-    else
-    {
-        menor=numero
-    }   
+    int num, menor=0, maior=0;
+    printf("Informe um numero:\n");
+    scanf("%d", &num);
+    maior=num;
+    menor=num;
+        do
+        {
+            printf("Informe um numero:\n");
+            scanf("%d", &num);
+            if (num>=maior)
+                maior=num;
+            if (num<=menor&&num!=0)
+                menor=num;
+        } while (num!=0);
+    printf("Maior:%d\tMenor:%d", maior, menor);
+    return 0;
 }

@@ -18,9 +18,7 @@ int main(void)
             somaPares=somaPares+i;
         }
         if (i%2!=0&&i%9==0)
-        {
             produtoImpar=produtoImpar*i;
-        }
         media = ((float)numero+2)/2;   
     }
     }while(numero<=2);

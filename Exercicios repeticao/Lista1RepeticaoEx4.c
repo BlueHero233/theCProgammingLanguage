@@ -34,4 +34,22 @@ Quantidade de estrangeiros: 3
 A idade media dos brasileiros sem curso superior eh: 18.0
 A menor idade de estrangeiros com curos superior eh: 25
 */
+#include <stdio.h>
+int main (void)
+{
+    int burajirujin=0, gaikokujin=0, toshi;
+    float heikinNenrei;
+    char kokuseki, daigakuKyouiku;
+    return 0;
+    do
+    {
+        printf("Informe a idade:\n");
+        scanf("%d", &toshi);
+        printf("Informe a nacionalidade (B - Brasileiro ou E - Estrangeiro):\n");
+        scanf("%c", &kokuseki);
+        printf("Possui curso superior (S - Sim ou N - Nao):\n");
+        scanf("%c", &daigakuKyouiku);
 
+    } while (toshi!=0);
+    return 0;
+}
