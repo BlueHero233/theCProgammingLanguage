@@ -10,14 +10,11 @@ Informe o valor do expoente: 5
 int main(void)
 {
     int base, expoente, resultado, i;
-    for (i=1;i<=expoente;i++)
+    for (i=1;i<expoente;i++)
     {
-        if (i!=expoente)
-        {
-            /* code */
-        }
         resultado=resultado*base;
+        printf("%d*", base);
     }
+    printf("%d=%d\n", base, resultado);
     return 0;
 }
-    

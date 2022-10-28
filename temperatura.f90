@@ -18,6 +18,7 @@ c      NetPBM's ppmtogif can be used to convert the ppm image generated
 c      to a gif.  The red, green and blue values (RGB) are
 c      assumed to vary linearly with wavelength (for GAM=1).
 c      NetPBM Software: ftp://ftp.cs.ubc.ca/ftp/archive/netpbm/
+c      
 c
        IMPLICIT REAL*8 (a-h,o-z)
        DIMENSION ICV(600,100,3)

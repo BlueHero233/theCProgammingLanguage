@@ -8,7 +8,7 @@ int main(void)
 int i, limInicial, limFinal, incremento, media=1, cont=0, soma=0;
     printf("Informe o limite inicial, final e o incremento\n");
     scanf("%d%d%d", &limInicial, &limFinal, &incremento);
-    for (i=limInicial; i <=limFinal; i=i+incremento)
+    for (i=limInicial;i<=limFinal;i=i+incremento)
     {
         printf("%d\n", i);
         if (i%35==0&&i%2!=0)

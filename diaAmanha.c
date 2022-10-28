@@ -2,41 +2,41 @@
 
 int main()
 {
-  int d, m, a, dpm=31;
+  int dia, mes, ano, diasPorMes=31;
   printf("Insira a data (dd/mm/aaaa):\n");
-  scanf("%d/%d/%d", &d, &m, &a);
-  if ((d<=0||d>31||m<=0||m>=13)||(29<=d&&m==2&&a%4!=0&&a%400!=0))
+  scanf("%d/%d/%d", &dia, &mes, &ano);
+  if ((dia<=0||dia>31||mes<=0||mes>=13)||(29<=dia&&mes==2&&a%4!=0&&a%400!=0))
     printf("Data Invalida!\n");
   else
   {
-    d++;
-    if (m==4||m==6||m==9||m==11)
-      dpm=30;
-    else if (m==2)
+    dia++;
+    if (mes==4||mes==6||mes==9||mes==11)
+      diasPorMes=30;
+    else if (mes==2)
     {
-      dpm=28;
-      if (a%4==0)
+      diasPorMes=28;
+      if (ano%4==0)
       {
-        dpm=29;
-        if (a%100==0)
+        diasPorMes=29;
+        if (ano%100==0)
         {
-          dpm=28;
-          if (a%400==0)
-          dpm=29;
+          diasPorMes=28;
+          if (ano%400==0)
+          diasPorMes=29;
         }
       }
     }
-    if (d>dpm)
+    if (dia>diasPorMes)
     {
-        d=1;
-        m++;
-        if (m>12)
+        dia=1;
+        mes++;
+        if (mes>12)
         {
-          m=1;
-          a++;
+          mes=1;
+          ano++;
         }
     }
-    printf("A data de amanha eh: %d/%d/%d\n", d, m, a);
+    printf("A data de amanha eh: %d/%d/%d\n", dia, mes, ano);
     return 0;
   }
 }

@@ -1,6 +1,6 @@
-/*O custo ao consumidor de um carro novo é a soma do custo de fábrica com a percentagem do distribuidor
-e a percentagem dos impostos (ambas aplicadas sobre o custo de fábrica). Escrever um programa para, a
-partir do custo de fábrica do carro, calcular e mostrar o custo ao consumidor.*/
+/*O custo ao consumidor de um carro novo ï¿½ a soma do custo de fï¿½brica com a percentagem do distribuidor
+e a percentagem dos impostos (ambas aplicadas sobre o custo de fï¿½brica). Escrever um programa para, a
+partir do custo de fï¿½brica do carro, calcular e mostrar o custo ao consumidor.*/
 #include <stdio.h>
 int main(void)
 {
@@ -13,6 +13,6 @@ int main(void)
     printf("Informe a percentagem do imposto em decimal: \n");
     scanf("%f", &imposto);
     custoFinal=custoFabrica+custoFabrica*distribuidor/100+custoFabrica*imposto/100;
-    printf("O custo do veiculo ao consumidor eh: %d\n", custoFinal000);
+    printf("O custo do veiculo ao consumidor eh: %d\n", custoFinal);
     return 0;
 }

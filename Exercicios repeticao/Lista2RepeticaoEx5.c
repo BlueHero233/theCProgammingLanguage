@@ -33,7 +33,6 @@ int main(void)
             scanf("%f", &valor);
             soma=soma+(quantidade*valor);
         }
-        
     } while (quantidade<0);
     notasDez=(int)troco/10;
     notasCinco=(int)%10/5;

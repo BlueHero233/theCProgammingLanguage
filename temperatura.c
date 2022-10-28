@@ -18,7 +18,7 @@
  *      to a gif.  The red, green and blue values (RGB) are
  *      assumed to vary linearly with wavelength (for GAM=1).
  *      NetPBM Software: ftp://ftp.cs.ubc.ca/ftp/archive/netpbm/
- ***
+ *
  *      Converted to C by William T. Bridgman (bridgman@wyeth.gsfc.nasa.gov)
  *      in February, 2000.
  *        - Original integration method replaced by trapezoid rule.
@@ -27,19 +27,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
 /* Function prototypes */
-void BlackBody(double temperature, double *X, double *Y,double *Z);
-void TickMark(double temperature, short iType,double *R, double *G, double *B);
+void blackBody(double temperature, double *X, double *Y,double *Z);
+void tickMark(double temperature, short iType,double *R, double *G, double *B);
 void XYZ2RGB(double xr, double yr, double zr, double xg, double yg, double zg,
               double xb, double yb, double zb, double xc, double yc, double zc,
               double *red, double *green,double *blue);
 double DMAX1(double x, double y, double z);
 
 int main(int argc,char** argv) {
-
     static short    colorValues[600][100][3]; /* image array */
-
 /*
  *      Chromaticity Coordinates for Red, Green, Blue and White
  */
@@ -68,13 +65,12 @@ int main(int argc,char** argv) {
  *      FIND COLOR VALUE, colorValues, OF EACH PIXEL
  */
     colorMax=0.0;
-
     /* loop over temperature range */
     for(i=0;i<imageWidth;i++) {
         temperature=1000.0 + (float)i * (10000.0/imageWidth);
         iType=2;
 
-        BlackBody(temperature,&X,&Y,&Z); /* X,Y,Z */
+        blackBody(temperature,&X,&Y,&Z); /* X,Y,Z */
 
         XYZ2RGB(XRed,YRed,ZRed,XGreen,YGreen,ZGreen,XBlue,YBlue,ZBlue,
                       X,Y,Z,&red,&green,&blue); /* convert to RGB */
@@ -82,7 +78,7 @@ int main(int argc,char** argv) {
         /* draw a 'line' of the color bar */
         for(j=0;j<imageHeight;j++) {
             /* draw tick mark if necessary */
-            if (j>40) TickMark(temperature,iType,&red,&green,&blue);
+            if (j>40) tickMark(temperature,iType,&red,&green,&blue);
 
             rangeMax=1.0e-10;
             if(red>rangeMax) rangeMax=red;
@@ -135,7 +131,7 @@ colorValues[i][j][2]=(short)(float)(colorDepth)*pow(blue/rangeMax,gamma);
  *      "integrating" the product of the wavelength distribution of
  *       energy and the XYZ functions for a uniform source.
  */
-void BlackBody(double temperature, double *X, double *Y,double *Z) {
+void blackBody(double temperature, double *X, double *Y,double *Z) {
 
 /*
  *      CIE Color Matching Functions (x_bar,y_bar,z_bar)
@@ -257,7 +253,7 @@ dis=3.74183e-16*(1.0/pow(wavelength,5))/(exp(con/(wavelength*temperature))-1.);
  *
  *      PLACE MARKERS ON IMAGE
  */
-void TickMark(double temperature, short iType,
+void tickMark(double temperature, short iType,
     double *red, double *green, double *blue) {
 
     long k;

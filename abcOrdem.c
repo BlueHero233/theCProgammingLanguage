@@ -1,15 +1,18 @@
+//para caso 1, ordem crescente, para caso 2, ordem decrescente, para caso 3, menor maior medio
 #include <stdio.h>
-
+#include <ctype.h>
 int main()
 {
-    int i;
-    printf("Insira os valor de i\n");
-    scanf("%d", &i);
-    float a, b, c;
+    char opcao;
+    int a, b, c;
+    printf("Insira a opcao (A, B ou C)\n");
+    scanf("%c", &opcao);
+    toupper(opcao);
     printf("Insira os valores de a, b e c\n");
     scanf("%d%d%d", &a, &b, &c);
-    if (i==1)
+    switch (opcao)
     {
+    case 'A':
         if (a<b&&a<c)
         {
             if(b<c)
@@ -31,9 +34,8 @@ int main()
             else
             printf("%d %d %d", c, b, a);
         }
-    }
-    if (i==2)
-    {
+        break;
+    case 'B':
         if (a>b&&a>c)
         {
             if(b>c)
@@ -55,9 +57,8 @@ int main()
             else
             printf("%d %d %d", c, b, a);
         }
-    }
-    if (i==3)
-    {
+        break;
+    case 'C':
         if (a<b&&a<c)
         {
             if(b<c)
@@ -79,6 +80,8 @@ int main()
             else
             printf("%d %d %d", c, a, b);
         }
-    }
+        break;
+    default:
+        break;
     return 0;
 }

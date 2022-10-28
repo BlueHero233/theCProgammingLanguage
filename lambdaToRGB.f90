@@ -13,6 +13,7 @@ c      to a gif.  The red, green and blue values (RGB) are
 c      assumed to vary linearly with wavelength (for GAMMA=1).
 c      NetPBM Software: ftp://ftp.cs.ubc.ca/ftp/archive/netpbm/
 c
+c
        IMPLICIT REAL*8 (a-h,o-z)
        REAL*8 CV(500,500,3)
 c
