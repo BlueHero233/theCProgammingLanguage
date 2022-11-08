@@ -14,13 +14,14 @@ Unidade(s): 3*/
 #include <stdio.h>
 int main(void)
 {
-    double numero
+    double numero;
     printf("Informe um valor double:\n");
     scanf("%lf", &numero);
-    printf("Numero informado:\n", numero);
-    printf("Parte inteira: 123\n", );
-    printf("");
-    printf("");
-    printf("");
-    printf("");
+    printf("Numero informado: %lf\n", numero);
+    printf("Parte inteira: %d\n", (int)numero);
+    printf("Parte decimal como inteiro de tres digitos: %f\n", ((float)numero)-(int)numero);
+    printf("Centena(s): %d\n", (int)numero/100);
+    printf("Dezena(s): %d\n", (int)numero/10%10);
+    printf("Unidade(s): %d\n", (int)numero/1%10);
+    return 0;
 }

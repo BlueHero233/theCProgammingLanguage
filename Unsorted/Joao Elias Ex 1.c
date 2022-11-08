@@ -15,37 +15,34 @@ Informe um numero: 10
 10 => ...
 
 Soma total dos impares = 3025*/
+
 #include <stdio.h>
 int main(void)
 {
-    int num, impar, i, j, soma, total=0;
+    int num,consecutivo,i,j;
+    int soma=0,impar=1;
     do
     {
         printf("Informe um numero:\n");
-        scanf("%d", &num);
+        scanf("%d",&num);
         if(num<1)
         {
             printf("Numero Invalido!\n");
         }
     }while(num<1);
-    //n=imparN
-    //n+1=imparN+1
-    //soma dos impares consecutivos = numero^3
-    for (i = 1; i <= num; i++)
+    for (i=1;i<=num;i++)
     {
-        for ( j = 1; j <= (i*i)+i; j++)
+        printf("%d => ",i);
+        consecutivo=0;
+        for (j=0;j<i;j++)
         {
-            if (i%2==0)
-            {
-                
-            }
- 
-            printf("%d\t", j);
-
+            printf("%d",impar);
+            consecutivo+=impar;
+            soma+=impar;
+            impar+=2;
         }
-        j=j+j;
-        printf("\n");
+        printf("= %d\n", consecutivo);
     }
-    printf("Soma total dos impares = %d", total);
+    printf("Soma total dos impares = %d\n",soma);
     return 0;
 }

@@ -35,8 +35,8 @@ int main(void)
         }
     } while (quantidade<0);
     notasDez=(int)troco/10;
-    notasCinco=(int)%10/5;
-    notasUm=(int)%5;
+    notasCinco=(int)troco%10/5;
+    notasUm=(int)troco%5;
     centavos=troco-(int)troco;
     printf("O valor do troco sera devolvido com\n");
     printf("%d notas de 10 reais\n", notasDez);
