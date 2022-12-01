@@ -7,6 +7,8 @@ Cria-lo para o tamanho maximo possivel.
 */
 #include "vetores.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 int main(void)
 {
     int i, j=0, vetorA[100], vetorB[50], contZero=0;

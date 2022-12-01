@@ -1,11 +1,11 @@
-/*(Desafio) Implemente uma função que recebe por parâmetro um vetor numérico e retorna o número de
-maior ocorrência no vetor.
-Use a função para verificar o número que ocorre com maior frequência em um vetor de 10 posições com
-valores aleatórios entre 1 e 5. Se ocorrer de mais de um elemento ter a maior frequência, considere apenas o
+/*(Desafio) Implemente uma funï¿½ï¿½o que recebe por parï¿½metro um vetor numï¿½rico e retorna o nï¿½mero de
+maior ocorrï¿½ncia no vetor.
+Use a funï¿½ï¿½o para verificar o nï¿½mero que ocorre com maior frequï¿½ncia em um vetor de 10 posiï¿½ï¿½es com
+valores aleatï¿½rios entre 1 e 5. Se ocorrer de mais de um elemento ter a maior frequï¿½ncia, considere apenas o
 que ocorre primeiro no vetor.
 Exemplo:*/
 #include <stdio.h>
-#include "vetoresAula.h"
+#include "vetores.h"
 maiorOcorrencia(int vetor[], int tamanho);
 int main(void){
     int tamanho, limite;

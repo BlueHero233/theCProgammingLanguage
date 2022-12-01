@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "vetoresAula.h"
+#include "vetores.h"
 int main(void){
     int tamanho, limInf, limSup, vetorA[5];
     printf("Insira o tamanho do vetor\n");
