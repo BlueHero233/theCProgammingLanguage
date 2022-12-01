@@ -2,21 +2,15 @@ int fatorial(int a)
 {
     int fat=1, i;
     for (i=a;i>=1;i--)
-    {
         fat=fat*i;
-    }
     return fat;
 }
 void informarPrimo(int a)//5
 {
     if (primo(a)==0)
-    {
         printf("O numero %d eh primo\n", a);
-    }
     else
-    {
         printf("O numero %d nao eh primo\n", a);
-    }
 }
 int soma(int a, int b)
 {
@@ -30,13 +24,9 @@ float divisao(int a, int b)
 {
     float resultado;
     if (b==0)
-    {
         resultado=0;
-    }
     else
-    {
         resultado=(float)a/b;
-    }
     return resultado;
 }
 int primo(int n){   //n para qualquer numero
@@ -55,9 +45,7 @@ unsigned long long fatorialLLU(int a)
 {
     int fat=1, i;
     for (i=a;i>=1;i--)
-    {
         fat=fat*i;
-    }
     return fat;
 }
 int quadrado(int a)
@@ -69,9 +57,7 @@ void impressaoFatorial(int a)
     int i;
     printf("%d! = ", a);
     for (i=a;i>=2;i--)
-    {
         printf("%d * ", i);
-    }
     printf("1 = %d\n", fatorial(a));
 }
 void fib(int n)
@@ -83,7 +69,7 @@ void fib(int n)
             a=b;    //a=1
             b=c;    //b=1
         }
-    printf("%d\n", c);
+    printf("%d\n", a);
 }
 float Q_rsqrt( float numero )
 {

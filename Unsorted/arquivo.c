@@ -16,5 +16,5 @@ void fib(int n)     //fib.c
             a=b;    //a=1
             b=c;    //b=1
         }
-    printf("%d\n", c);
+    printf("%d\n", a);
 }
