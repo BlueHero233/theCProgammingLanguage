@@ -11,20 +11,18 @@ Exemplo:
 #include <stdio.h>
 #include <string.h>
 #define size 100
+void printVetor(int vetor[], int tam);
 int main(void)
 {
     char string[size];
-    int tam=0, i, j, aux, contPar=0, contImpar=0, cont;
+    int tam=0, i, j, k, aux, contPar=0, contImpar=0, cont;
     gets(string);
     while (string[tam]!='\0')
         tam++;
     int vetor[tam];
-
     for (i=0; i<tam; i++)
         vetor[i]=string[i];
-
-    for (i=0; i<tam; i++)
-        printf("%d\t", vetor[i]);
+    void printVetor(int vetor[], int tam);
     putchar('\n');
     for (i = tam-1; i > 0; i--){   
         for (j = 0; j < i; j++){
@@ -35,49 +33,43 @@ int main(void)
             }
         }
     }
-
-    for (i = 0; i < tam; i++)
-        printf("%d\t", vetor[i]);
+    void printVetor(int vetor[], int tam);
     putchar('\n');
 
     for (i = 0; i < tam; i++){
         if (vetor[i]%2==0){
-            if (vetor[i+1]==vetor[i])
-                i--;
-            else
+            if (vetor[i]!=vetor[i-1])
                 contPar++;
         }
-    }
-
-    for (i = 0; i < tam; i++){
-        if (vetor[i]%2!=0){
-            if (vetor[i+1]==vetor[i])
-                i--;
-            else
+        else{
+            if (vetor[i]!=vetor[i-1])
                 contImpar++;
         }
     }
+
     printf("\nNumero de pares: %d",contPar);
     printf("\nNumero de impares: %d",contImpar);
     int vPar[contPar], vImpar[contImpar], mPar[contPar][2], mImpar[contImpar][2];
-    for (i = 0; i < contPar; i++)
-    {
+    j=0;
+    k=0;
+    for (i = 0; i < contPar; i++){
         if (vetor[i]%2==0){
-            if (vetor[i+1]==vetor[i])
-                i--;
-            else
-                vPar[i]=vetor[i];
+            if (vetor[i]!=vetor[i-1]){
+                vPar[j]=vetor[i];
+                j++;
+            }
         }
     }
-    for (i = 0; i < contImpar; i++)
-    {
+
+    for (i = 0; i < contImpar; i++){
         if (vetor[i]%2!=0){
-            if (vetor[i+1]==vetor[i])
-                i--;
-            else
-                vImpar[i]=vetor[i];
+            if (vetor[i]!=vetor[i-1]){
+                vImpar[k]=vetor[i];
+                k++;
+            }
         }
     }
+
     for (i = 0; i<contPar; i++){
         mPar[i][0]=vPar[i];
         cont=0;
@@ -97,4 +89,9 @@ int main(void)
         }
     }
     return 0;
+}
+void printVetor(int vetor[], int tam){
+    int i;
+    for (i = 0; i < tam; i++)
+        printf("%d\t", vetor[i]);
 }
