@@ -14,7 +14,7 @@ Exemplo:
 int main(void)
 {
     char string[size];
-    int i=0, j=0, vetor[size], aux;
+    int i=0, j=0, vetor[size], aux, vPar[size], vImpar[size];
     gets(string);
     while (vetor[i]!='\0'){
         if (vetor[i]==' ')
@@ -36,5 +36,13 @@ int main(void)
     }
     for (i = 0; i < size; i++)
         printf("%d\t", vetor[i]);
+    for (i = 0; i<contPares; i++){
+        mPares[i][0]=par[i];
+        cont=0;
+        for (j=0; j<size; j++){
+            if(par[i]==vetor[i])
+                cont++;
+            mPares[i][1]=cont;
+        }
     return 0;
 }
