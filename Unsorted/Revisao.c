@@ -9,26 +9,28 @@ Exemplo: -Eu--gosto---de-programar----em-Linguagem-----de---Programacao-C------*
 int main(void)
 {
     char string[255];
-    int espaco=0, i, j, k, aux, n, m=2, matriz[n][m], vetor[255];
+    int espaco=0, i, j, k, aux, n, matriz[n][2], tam=0;
     gets(string);
     i=0;
     j=0;
-    while (i<=string[i]){
+    while (string[i]!='\0'){
+        tam++;
+        i++;
+    }
+    int vetor[tam];
+    for (i = 0; i < tam; i++){
         if(string[i]==' '){
             espaco++;
-            i++;
         }
         else{
-            vetor[j]=espaco;
+            vetor[i]=espaco;
             espaco=0;
-            j++;
-            i++;
         }
     }
     for (k = 0; k < j; k++)
         printf("%d\t", vetor[k]);
     putchar('\n');
-    for (i = 49; i > 0; i--){
+    for (i = tam-1; i > 0; i--){
         for ( j = 0; j < i; j++){
             if (vetor[j]>vetor[j+1]){
                 aux=vetor[j];
@@ -37,7 +39,7 @@ int main(void)
             }
         }
     }
-    for (j = 0; j < 50; j++)
+    for (j = 0; j < tam; j++)
         printf("%d\t", vetor[j]);
     putchar('\n');
     return 0;
