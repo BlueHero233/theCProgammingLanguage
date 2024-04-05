@@ -26,14 +26,19 @@ ListaE* criar_listaE(){
     l->head = NULL;
     return l;
 }
-int removerRecursiva(int key, ListaE *l){
+Cell* inserirRecursivaFim(ListaE* l, int key){
     Cell *cellAtual, *cellAntes = NULL;
     if (!listaE_vazia(l)){
         cellAtual = l->head;
         if(cellAtual->item == key)
             l->head = l->head->next;
-        else
-            l->next = removerRecursiva(key, l->next);
     }
+    else
+        l->next = inserirRecursivaFim(l->next, key);
+        if (cellAtual != NULL){
+            if (cellAntes != NULL)
+            	cellAntes->next = cellAtual->next;
+            free(cellAtual);
+        }
     return l;
 }
